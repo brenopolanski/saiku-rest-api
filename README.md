@@ -1,3 +1,3 @@
-PouchDB Facade
+# PouchDB Facade
 
 > IN DEVELOPMENT :v:
