@@ -1,3 +1,3 @@
-# PouchDB Facade
+# Saiku REST API
 
 > IN DEVELOPMENT :v:
