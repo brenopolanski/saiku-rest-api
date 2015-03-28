@@ -1,3 +1,3 @@
 # Saiku REST API
 
-> IN DEVELOPMENT :v:
+> IN DEVELOPMENT :construction:
