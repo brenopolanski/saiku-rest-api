@@ -4,9 +4,10 @@ var extend = require('node.extend');
 var SessionRequest = require('./lib/session');
 
 var defaults = {
-	host: 'localhost:8080',
+	host: 'http://localhost:8080',
 	pathName: '/pentaho/plugin/saiku/api/',
-	userName: 'Admin'
+	userName: 'admin',
+	password: 'admin'
 };
 
 function Saiku(options) {
@@ -16,13 +17,16 @@ function Saiku(options) {
 
 	this._options = extend({}, defaults, options);
 
+	var session = new SessionRequest(this._options);
+	session.post();
+
 	return this;
 }
 
-Saiku.prototype.session = function(options) {
-	options = options || {};
-	options = extend(options, this._options);
-	return new SessionRequest(options);
-};
+// Saiku.prototype.session = function(options) {
+// 	options = options || {};
+// 	options = extend(options, this._options);
+// 	return new SessionRequest(options);
+// };
 
 module.exports = Saiku;
