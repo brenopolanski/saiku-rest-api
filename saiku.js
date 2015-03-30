@@ -1,8 +1,10 @@
 'use strict';
 
 var extend = require('node.extend');
-var SessionRequest = require('./lib/session');
+// var SessionRequest = require('./lib/session');
+var SchemasRequest = require('./lib/schemas');
 
+// add in settings
 var defaults = {
 	host: 'http://localhost:8080',
 	pathName: '/pentaho/plugin/saiku/api/',
@@ -17,10 +19,12 @@ function Saiku(options) {
 
 	this._options = extend({}, defaults, options);
 
-	var session = new SessionRequest(this._options);
-	session.createSession(function(response) {
-		console.log(response);
-	});
+	// var session = new SessionRequest(this._options);
+	// session.createSession(function(response) {
+	// 	console.log(response);
+	// });
+
+	// SessionRequest(this._options).createSession();
 
 	return this;
 }
@@ -30,5 +34,11 @@ function Saiku(options) {
 // 	options = extend(options, this._options);
 // 	return new SessionRequest(options);
 // };
+
+Saiku.prototype.schemas = function(options) {
+	options = options || {};
+	options = extend(options, this._options);
+	return new SchemasRequest(options);
+};
 
 module.exports = Saiku;
