@@ -18,7 +18,9 @@ function Saiku(options) {
 	this._options = extend({}, defaults, options);
 
 	var session = new SessionRequest(this._options);
-	session.post();
+	session.createSession(function(response) {
+		console.log(response);
+	});
 
 	return this;
 }
