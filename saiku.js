@@ -6,7 +6,7 @@ var SchemasRequest = require('./lib/schemas');
 var defaults = {
 	host: 'http://localhost:8080',
 	pathName: '/pentaho/plugin/saiku/api/',
-	userName: 'admin',
+	username: 'admin',
 	password: 'admin'
 };
 
