@@ -21,9 +21,9 @@
     "url": "https://github.com/brenopolanski/saiku-rest-api/issues"
   },
   "dependencies": {
-    "node.extend": "~1.1.3",
     "request": "~2.54.0",
     "node-localstorage": "~0.5.0",
-    "underscore": "~1.8.3"
+    "underscore": "~1.8.3",
+    "logdown": "~1.1.2"
   }
 }
