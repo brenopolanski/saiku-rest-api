@@ -2,6 +2,9 @@
 
 var _ = require('underscore');
 var SchemasRequest = require('./lib/schemas');
+var RepositoryRequest = require('./lib/repository');
+var ExportRequest = require('./lib/export');
+var MDXRequest = require('./lib/mdx');
 
 var defaults = {
 	host: 'http://localhost:8080',
@@ -24,6 +27,24 @@ Saiku.prototype.schemas = function(options) {
 	options = options || {};
 	options = _.extend(options, this._options);
 	return new SchemasRequest(options);
+};
+
+Saiku.prototype.repository = function(options) {
+	options = options || {};
+	options = _.extend(options, this._options);
+	return new RepositoryRequest(options);
+};
+
+Saiku.prototype.export = function(options) {
+	options = options || {};
+	options = _.extend(options, this._options);
+	return new ExportRequest(options);
+};
+
+Saiku.prototype.mdx = function(options) {
+	options = options || {};
+	options = _.extend(options, this._options);
+	return new MDXRequest(options);
 };
 
 module.exports = Saiku;
