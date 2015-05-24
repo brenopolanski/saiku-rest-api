@@ -54,6 +54,19 @@ function Saiku(options) {
 }
 
 /**
+ * Start a request against the `/session` endpoint
+ *
+ * @method session
+ * @param {Object} [options] An options hash for a new SessionRequest
+ * @return {SessionRequest} A SessionRequest instance
+ */
+SaikuSession.prototype.session = function(options) {
+	options = options || {};
+	options = _.extend(options, this._options);
+	return new SessionRequest(options);
+};
+
+/**
  * Start a request against the `/discover` endpoint
  *
  * @method schemas
