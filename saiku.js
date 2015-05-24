@@ -17,6 +17,7 @@
 
 // Pull in request module constructors
 var _ = require('underscore');
+var SessionRequest = require('./lib/session');
 var SchemasRequest = require('./lib/schemas');
 var RepositoryRequest = require('./lib/repository');
 var ExportRequest = require('./lib/export');
@@ -60,7 +61,7 @@ function Saiku(options) {
  * @param {Object} [options] An options hash for a new SessionRequest
  * @return {SessionRequest} A SessionRequest instance
  */
-SaikuSession.prototype.session = function(options) {
+Saiku.prototype.session = function(options) {
 	options = options || {};
 	options = _.extend(options, this._options);
 	return new SessionRequest(options);
