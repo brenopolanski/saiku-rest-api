@@ -22,6 +22,34 @@ var Saiku = require('saiku-rest-api');
 
 > The REST API client requires Node.js version 0.10 or above.
 
+## Using the Client
+
+The module is a constructor, so you can create an instance of the API client bound to the endpoint for your Saiku:
+
+```sh
+var Saiku = require('saiku-rest-api');
+var saiku = new Saiku({ 
+	host: 'http://localhost:8080',
+	username: 'admin',
+	password: 'admin'
+});
+```
+
+> Once an instance is constructed, you can chain off of it to construct a specific request.
+
+We support requesting posts using either a callback-style:
+
+```javascript
+// Callbacks
+saiku.schemas().get(function(error, data) {
+	if (!error) {
+		// do something with the returned posts
+	}
+	else {
+		// handle error
+});
+```
+
 ## Contributing
 
 Check [CONTRIBUTING.md](https://github.com/brenopolanski/saiku-rest-api/blob/master/CONTRIBUTING.md) for more information.
