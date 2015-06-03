@@ -1,5 +1,7 @@
 # Saiku REST API
 
+This is a client for the [Saiku Analytics REST API](http://community.meteorite.bi/docs/). It is **under active development**, and should be considered beta software. More features are in development, and [**issues**](https://github.com/brenopolanski/saiku-rest-api/issues) are welcome if you find something that doesn't work!
+
 ## Contributing
 
 Check [CONTRIBUTING.md](https://github.com/brenopolanski/saiku-rest-api/blob/master/CONTRIBUTING.md) for more information.
