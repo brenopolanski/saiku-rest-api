@@ -1,4 +1,4 @@
-# Saiku REST API
+# A Saiku REST API client for Node.js
 
 This is a client for the [Saiku Analytics REST API](http://community.meteorite.bi/docs/). It is **under active development**, and should be considered beta software. More features are in development, and [**issues**](https://github.com/brenopolanski/saiku-rest-api/issues) are welcome if you find something that doesn't work!
 
