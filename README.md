@@ -4,11 +4,11 @@ This is a client for the [Saiku Analytics REST API](http://community.meteorite.b
 
 ## Purpose
 
-This library is designed to make it easy for your Node.js application to request specific resources from Saiku. It uses a query builder-style syntax to let you craft the request being made to the Saiku endpoints, then returns the API server's response to your application as a JavaScript object.
+This client is designed to make it easy for your Node.js application to request specific resources from Saiku. It uses a query builder-style syntax to let you craft the request being made to the Saiku endpoints, then returns the API server's response to your application as a JavaScript object.
 
 ## Installation
 
-To use the library, install it with [npm](https://www.npmjs.com/):
+To use the client, install it with [npm](https://www.npmjs.com/):
 
 ```sh
 npm install --save saiku-rest-api
