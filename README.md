@@ -47,6 +47,7 @@ saiku.schemas().get(function(error, data) {
 	}
 	else {
 		// handle error
+	}
 });
 ```
 
