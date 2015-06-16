@@ -51,6 +51,40 @@ saiku.schemas().get(function(error, data) {
 });
 ```
 
+### Create a session
+
+```javascript
+saiku.session().createSession();
+```
+
+### Schemas
+
+Return Schemas:
+
+```javascript
+saiku.schemas().get(function(error, data) {
+	if (!error) {
+		// do something with the returned posts
+	}
+	else {
+		// handle error
+	}
+});
+```
+
+Return metadata Schemas:
+
+```javascript
+saiku.schemas().metadata(function(error, data) {
+	if (!error) {
+		// do something with the returned posts
+	}
+	else {
+		// handle error
+	}
+});
+```
+
 ## Client Documentation
 
 In addition to the above getting-started guide, we have automatically-generated [Client documentation](http://brenopolanski.github.io/saiku-rest-api/).
