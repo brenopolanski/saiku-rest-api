@@ -51,6 +51,10 @@ saiku.schemas().get(function(error, data) {
 });
 ```
 
+## Client Documentation
+
+In addition to the above getting-started guide, we have automatically-generated [Client documentation](http://brenopolanski.github.io/saiku-rest-api/).
+
 ## Contributing
 
 Check [CONTRIBUTING.md](https://github.com/brenopolanski/saiku-rest-api/blob/master/CONTRIBUTING.md) for more information.
