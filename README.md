@@ -85,6 +85,71 @@ saiku.schemas().metadata(function(error, data) {
 });
 ```
 
+### Repository
+
+Return matada repository:
+
+```javascript
+saiku.repository({ type: 'saiku' }).get(function(error, data) {
+	if (!error) {
+		// do something with the returned posts
+	}
+	else {
+		// handle error
+	}
+});
+```
+
+### Export
+
+Export file (JSON/HTML/CSV/XLS/):
+
+```javascript
+saiku.export({ mimetype: 'html', filePath: '/homes/home:admin/Product Name.saiku' }).file(function(error, data) {
+	if (!error) {
+		// do something with the returned posts
+	}
+	else {
+		// handle error
+	}
+});
+```
+
+Export query (HTML/CSV/XLS/PDF):
+
+```javascript
+saiku.export({ mimetype: 'html', queryName: 'query123' }).query(function(error, data) {
+	if (!error) {
+		// do something with the returned posts
+	}
+	else {
+		// handle error
+	}
+});
+```
+
+### MDX
+
+Execute query MDX:
+
+```javascript
+saiku.mdx({
+	connectionName: 'foodmart', 
+	schemaName: 'FoodMart',
+	cubeName: 'Sales',
+ 	queryName: 'query123',
+	mdx: 'WITH SET [~ROWS] AS {[Time].[Time].[Year].Members} SELECT NON EMPTY {[Measures].[Unit Sales]}' +
+	     'ON COLUMNS, NON EMPTY [~ROWS] ON ROWS FROM [Sales]',
+}).execute(function(error, data) {
+	if (!error) {
+		// do something with the returned posts
+	}
+	else {
+		// handle error
+	}
+});
+```
+
 ## Client Documentation
 
 In addition to the above getting-started guide, we have automatically-generated [Client documentation](http://brenopolanski.github.io/saiku-rest-api/).
