@@ -1,0 +1,969 @@
+{
+    "project": {},
+    "files": {
+        "lib/export.js": {
+            "name": "lib/export.js",
+            "modules": {
+                "ExportRequest": 1
+            },
+            "classes": {
+                "ExportRequest": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "lib/mdx.js": {
+            "name": "lib/mdx.js",
+            "modules": {
+                "MDXRequest": 1
+            },
+            "classes": {
+                "MDXRequest": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "lib/repository.js": {
+            "name": "lib/repository.js",
+            "modules": {
+                "RepositoryRequest": 1
+            },
+            "classes": {
+                "RepositoryRequest": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "lib/schemas.js": {
+            "name": "lib/schemas.js",
+            "modules": {
+                "SchemasRequest": 1
+            },
+            "classes": {
+                "SchemasRequest": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "lib/session.js": {
+            "name": "lib/session.js",
+            "modules": {
+                "SessionRequest": 1
+            },
+            "classes": {
+                "SessionRequest": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "saiku.js": {
+            "name": "saiku.js",
+            "modules": {
+                "Saiku": 1
+            },
+            "classes": {
+                "Saiku": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {
+        "Saiku": {
+            "name": "Saiku",
+            "submodules": {
+                "ExportRequest": 1,
+                "MDXRequest": 1,
+                "RepositoryRequest": 1,
+                "SchemasRequest": 1
+            },
+            "classes": {
+                "ExportRequest": 1,
+                "MDXRequest": 1,
+                "RepositoryRequest": 1,
+                "SchemasRequest": 1,
+                "Saiku": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "main",
+            "file": "saiku.js",
+            "line": 33,
+            "description": "A Saiku REST API client for Node.js",
+            "example": [
+                "\n\t\tvar saiku = new Saiku({ host: 'http://localhost:8081' });\n\t\tsaiku.schemas().get(function(error, data) {\n\t\t\tif (!error) {\n\t\t\t\tconsole.log(data);\n\t\t\t}\n\t\t});"
+            ],
+            "itemtype": "main"
+        },
+        "ExportRequest": {
+            "name": "ExportRequest",
+            "submodules": {},
+            "classes": {
+                "ExportRequest": 1
+            },
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "Saiku",
+            "namespace": "",
+            "file": "lib/export.js",
+            "line": 14,
+            "beta": 1,
+            "description": "ExportRequest handle the /api/query/admin/export API endpoint"
+        },
+        "MDXRequest": {
+            "name": "MDXRequest",
+            "submodules": {},
+            "classes": {
+                "MDXRequest": 1
+            },
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "Saiku",
+            "namespace": "",
+            "file": "lib/mdx.js",
+            "line": 14,
+            "beta": 1,
+            "description": "MDXRequest handle the /api/query/execute API endpoint"
+        },
+        "RepositoryRequest": {
+            "name": "RepositoryRequest",
+            "submodules": {},
+            "classes": {
+                "RepositoryRequest": 1
+            },
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "Saiku",
+            "namespace": "",
+            "file": "lib/repository.js",
+            "line": 14,
+            "beta": 1,
+            "description": "RepositoryRequest handle the /api/repository API endpoint"
+        },
+        "SchemasRequest": {
+            "name": "SchemasRequest",
+            "submodules": {},
+            "classes": {
+                "SchemasRequest": 1
+            },
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "Saiku",
+            "namespace": "",
+            "file": "lib/schemas.js",
+            "line": 14,
+            "beta": 1,
+            "description": "SchemasRequest handle the /discover API endpoint"
+        },
+        "SaikuSession": {
+            "name": "SaikuSession",
+            "submodules": {
+                "SessionRequest": 1
+            },
+            "classes": {
+                "SessionRequest": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "file": "lib/session.js",
+            "line": 16
+        },
+        "SessionRequest": {
+            "name": "SessionRequest",
+            "submodules": {},
+            "classes": {
+                "SessionRequest": 1
+            },
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "SaikuSession",
+            "namespace": "",
+            "file": "lib/session.js",
+            "line": 16,
+            "beta": 1,
+            "description": "SessionRequest handle the /session API endpoint"
+        }
+    },
+    "classes": {
+        "ExportRequest": {
+            "name": "ExportRequest",
+            "shortname": "ExportRequest",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [
+                "Saiku"
+            ],
+            "module": "Saiku",
+            "submodule": "ExportRequest",
+            "namespace": "",
+            "file": "lib/export.js",
+            "line": 14,
+            "description": "ExportRequest handle the /api/query/admin/export API endpoint",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "options",
+                    "description": "A hash of options for the SessionRequest instance",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "host",
+                            "description": "A host name for send API requests",
+                            "type": "String",
+                            "optional": true
+                        },
+                        {
+                            "name": "username",
+                            "description": "A username for authenticating API requests",
+                            "type": "String",
+                            "optional": true
+                        },
+                        {
+                            "name": "password",
+                            "description": "A password for authenticating API requests",
+                            "type": "String",
+                            "optional": true
+                        }
+                    ]
+                }
+            ]
+        },
+        "MDXRequest": {
+            "name": "MDXRequest",
+            "shortname": "MDXRequest",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [
+                "Saiku"
+            ],
+            "module": "Saiku",
+            "submodule": "MDXRequest",
+            "namespace": "",
+            "file": "lib/mdx.js",
+            "line": 14,
+            "description": "MDXRequest handle the /api/query/execute API endpoint",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "options",
+                    "description": "A hash of options for the SessionRequest instance",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "host",
+                            "description": "A host name for send API requests",
+                            "type": "String",
+                            "optional": true
+                        },
+                        {
+                            "name": "username",
+                            "description": "A username for authenticating API requests",
+                            "type": "String",
+                            "optional": true
+                        },
+                        {
+                            "name": "password",
+                            "description": "A password for authenticating API requests",
+                            "type": "String",
+                            "optional": true
+                        }
+                    ]
+                }
+            ]
+        },
+        "RepositoryRequest": {
+            "name": "RepositoryRequest",
+            "shortname": "RepositoryRequest",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [
+                "Saiku"
+            ],
+            "module": "Saiku",
+            "submodule": "RepositoryRequest",
+            "namespace": "",
+            "file": "lib/repository.js",
+            "line": 14,
+            "description": "RepositoryRequest handle the /api/repository API endpoint",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "options",
+                    "description": "A hash of options for the SessionRequest instance",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "host",
+                            "description": "A host name for send API requests",
+                            "type": "String",
+                            "optional": true
+                        },
+                        {
+                            "name": "username",
+                            "description": "A username for authenticating API requests",
+                            "type": "String",
+                            "optional": true
+                        },
+                        {
+                            "name": "password",
+                            "description": "A password for authenticating API requests",
+                            "type": "String",
+                            "optional": true
+                        }
+                    ]
+                }
+            ]
+        },
+        "SchemasRequest": {
+            "name": "SchemasRequest",
+            "shortname": "SchemasRequest",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [
+                "Saiku"
+            ],
+            "module": "Saiku",
+            "submodule": "SchemasRequest",
+            "namespace": "",
+            "file": "lib/schemas.js",
+            "line": 14,
+            "description": "SchemasRequest handle the /discover API endpoint",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "options",
+                    "description": "A hash of options for the SessionRequest instance",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "host",
+                            "description": "A host name for send API requests",
+                            "type": "String",
+                            "optional": true
+                        },
+                        {
+                            "name": "username",
+                            "description": "A username for authenticating API requests",
+                            "type": "String",
+                            "optional": true
+                        },
+                        {
+                            "name": "password",
+                            "description": "A password for authenticating API requests",
+                            "type": "String",
+                            "optional": true
+                        }
+                    ]
+                }
+            ]
+        },
+        "SessionRequest": {
+            "name": "SessionRequest",
+            "shortname": "SessionRequest",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "SaikuSession",
+            "submodule": "SessionRequest",
+            "namespace": "",
+            "file": "lib/session.js",
+            "line": 16,
+            "description": "SessionRequest handle the /session API endpoint",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "options",
+                    "description": "A hash of options for the SessionRequest instance",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "host",
+                            "description": "A host name for send API requests",
+                            "type": "String",
+                            "optional": true
+                        },
+                        {
+                            "name": "username",
+                            "description": "A username for authenticating API requests",
+                            "type": "String",
+                            "optional": true
+                        },
+                        {
+                            "name": "password",
+                            "description": "A password for authenticating API requests",
+                            "type": "String",
+                            "optional": true
+                        }
+                    ]
+                }
+            ]
+        },
+        "Saiku": {
+            "name": "Saiku",
+            "shortname": "Saiku",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Saiku",
+            "namespace": "",
+            "file": "saiku.js",
+            "line": 33,
+            "description": "The base constructor for the Saiku API service",
+            "is_constructor": 1,
+            "uses": [
+                "SchemasRequest",
+                "RepositoryRequest",
+                "ExportRequest",
+                "MDXRequest"
+            ],
+            "params": [
+                {
+                    "name": "options",
+                    "description": "An options hash to configure the instance",
+                    "type": "Object",
+                    "props": [
+                        {
+                            "name": "host",
+                            "description": "A host name for send API requests",
+                            "type": "String",
+                            "optional": true
+                        },
+                        {
+                            "name": "username",
+                            "description": "A username for authenticating API requests",
+                            "type": "String",
+                            "optional": true
+                        },
+                        {
+                            "name": "password",
+                            "description": "A password for authenticating API requests",
+                            "type": "String",
+                            "optional": true
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "classitems": [
+        {
+            "file": "lib/export.js",
+            "line": 25,
+            "description": "Get session id",
+            "type": "String",
+            "access": "private",
+            "tagname": "",
+            "class": "ExportRequest",
+            "module": "Saiku",
+            "submodule": "ExportRequest"
+        },
+        {
+            "file": "lib/export.js",
+            "line": 33,
+            "description": "Configuration options for the request",
+            "itemtype": "property",
+            "name": "_options",
+            "type": "Object",
+            "access": "private",
+            "tagname": "",
+            "default": "{}",
+            "class": "ExportRequest",
+            "module": "Saiku",
+            "submodule": "ExportRequest"
+        },
+        {
+            "file": "lib/export.js",
+            "line": 44,
+            "description": "The URL template that will be used to assemble endpoint paths",
+            "type": "String",
+            "access": "private",
+            "tagname": "",
+            "class": "ExportRequest",
+            "module": "Saiku",
+            "submodule": "ExportRequest"
+        },
+        {
+            "file": "lib/export.js",
+            "line": 64,
+            "description": "Export file (JSON/HTML/CSV/XLS/)",
+            "itemtype": "method",
+            "name": "file",
+            "access": "public",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function"
+                }
+            ],
+            "class": "ExportRequest",
+            "module": "Saiku",
+            "submodule": "ExportRequest"
+        },
+        {
+            "file": "lib/export.js",
+            "line": 92,
+            "description": "Export query (HTML/CSV/XLS/PDF)",
+            "itemtype": "method",
+            "name": "query",
+            "access": "public",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function"
+                }
+            ],
+            "class": "ExportRequest",
+            "module": "Saiku",
+            "submodule": "ExportRequest"
+        },
+        {
+            "file": "lib/mdx.js",
+            "line": 25,
+            "description": "Get session id",
+            "type": "String",
+            "access": "private",
+            "tagname": "",
+            "class": "MDXRequest",
+            "module": "Saiku",
+            "submodule": "MDXRequest"
+        },
+        {
+            "file": "lib/mdx.js",
+            "line": 33,
+            "description": "Configuration options for the request",
+            "itemtype": "property",
+            "name": "_options",
+            "type": "Object",
+            "access": "private",
+            "tagname": "",
+            "default": "{}",
+            "class": "MDXRequest",
+            "module": "Saiku",
+            "submodule": "MDXRequest"
+        },
+        {
+            "file": "lib/mdx.js",
+            "line": 44,
+            "description": "The URL template that will be used to assemble endpoint paths",
+            "type": "String",
+            "access": "private",
+            "tagname": "",
+            "class": "MDXRequest",
+            "module": "Saiku",
+            "submodule": "MDXRequest"
+        },
+        {
+            "file": "lib/mdx.js",
+            "line": 53,
+            "description": "Execute query MDX",
+            "itemtype": "method",
+            "name": "execute",
+            "access": "public",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function"
+                }
+            ],
+            "class": "MDXRequest",
+            "module": "Saiku",
+            "submodule": "MDXRequest"
+        },
+        {
+            "file": "lib/repository.js",
+            "line": 25,
+            "description": "Configuration options for the request",
+            "itemtype": "property",
+            "name": "_options",
+            "type": "Object",
+            "access": "private",
+            "tagname": "",
+            "default": "{}",
+            "class": "RepositoryRequest",
+            "module": "Saiku",
+            "submodule": "RepositoryRequest"
+        },
+        {
+            "file": "lib/repository.js",
+            "line": 35,
+            "description": "The URL template that will be used to assemble endpoint paths",
+            "type": "String",
+            "access": "private",
+            "tagname": "",
+            "class": "RepositoryRequest",
+            "module": "Saiku",
+            "submodule": "RepositoryRequest"
+        },
+        {
+            "file": "lib/repository.js",
+            "line": 44,
+            "description": "Return matada repository",
+            "itemtype": "method",
+            "name": "get",
+            "access": "public",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function"
+                }
+            ],
+            "class": "RepositoryRequest",
+            "module": "Saiku",
+            "submodule": "RepositoryRequest"
+        },
+        {
+            "file": "lib/schemas.js",
+            "line": 25,
+            "description": "Configuration options for the request",
+            "itemtype": "property",
+            "name": "_options",
+            "type": "Object",
+            "access": "private",
+            "tagname": "",
+            "default": "{}",
+            "class": "SchemasRequest",
+            "module": "Saiku",
+            "submodule": "SchemasRequest"
+        },
+        {
+            "file": "lib/schemas.js",
+            "line": 35,
+            "description": "The URL template that will be used to assemble endpoint paths",
+            "type": "String",
+            "access": "private",
+            "tagname": "",
+            "class": "SchemasRequest",
+            "module": "Saiku",
+            "submodule": "SchemasRequest"
+        },
+        {
+            "file": "lib/schemas.js",
+            "line": 44,
+            "description": "Return Schemas",
+            "itemtype": "method",
+            "name": "get",
+            "access": "public",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function"
+                }
+            ],
+            "class": "SchemasRequest",
+            "module": "Saiku",
+            "submodule": "SchemasRequest"
+        },
+        {
+            "file": "lib/schemas.js",
+            "line": 55,
+            "description": "Return metadata Schemas",
+            "itemtype": "method",
+            "name": "metadata",
+            "access": "public",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function"
+                }
+            ],
+            "class": "SchemasRequest",
+            "module": "Saiku",
+            "submodule": "SchemasRequest"
+        },
+        {
+            "file": "lib/schemas.js",
+            "line": 70,
+            "description": "Get Schemas",
+            "access": "private",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function"
+                }
+            ],
+            "class": "SchemasRequest",
+            "module": "Saiku",
+            "submodule": "SchemasRequest"
+        },
+        {
+            "file": "lib/schemas.js",
+            "line": 97,
+            "description": "Get metadata Schemas",
+            "access": "private",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "key",
+                    "description": "The name of each cube",
+                    "type": "String"
+                },
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function"
+                }
+            ],
+            "class": "SchemasRequest",
+            "module": "Saiku",
+            "submodule": "SchemasRequest"
+        },
+        {
+            "file": "lib/schemas.js",
+            "line": 125,
+            "description": "Fetch cubes and join with schemas",
+            "access": "private",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "callback",
+                    "description": "",
+                    "type": "Function"
+                }
+            ],
+            "class": "SchemasRequest",
+            "module": "Saiku",
+            "submodule": "SchemasRequest"
+        },
+        {
+            "file": "lib/session.js",
+            "line": 27,
+            "description": "Configuration options for the request",
+            "itemtype": "property",
+            "name": "_options",
+            "type": "Object",
+            "access": "private",
+            "tagname": "",
+            "default": "{}",
+            "class": "SessionRequest",
+            "module": "SaikuSession",
+            "submodule": "SessionRequest"
+        },
+        {
+            "file": "lib/session.js",
+            "line": 37,
+            "description": "The URL template that will be used to assemble endpoint paths",
+            "type": "String",
+            "access": "private",
+            "tagname": "",
+            "class": "SessionRequest",
+            "module": "SaikuSession",
+            "submodule": "SessionRequest"
+        },
+        {
+            "file": "lib/session.js",
+            "line": 46,
+            "description": "Create a session for the requests",
+            "itemtype": "method",
+            "name": "createSession",
+            "access": "public",
+            "tagname": "",
+            "class": "SessionRequest",
+            "module": "SaikuSession",
+            "submodule": "SessionRequest"
+        },
+        {
+            "file": "lib/session.js",
+            "line": 72,
+            "description": "Set a session in local storage",
+            "access": "private",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "error",
+                    "description": "Error return",
+                    "type": "Object"
+                },
+                {
+                    "name": "response",
+                    "description": "Response return",
+                    "type": "Object"
+                }
+            ],
+            "class": "SessionRequest",
+            "module": "SaikuSession",
+            "submodule": "SessionRequest"
+        },
+        {
+            "file": "saiku.js",
+            "line": 57,
+            "description": "Start a request against the `/session` endpoint",
+            "itemtype": "method",
+            "name": "session",
+            "params": [
+                {
+                    "name": "options",
+                    "description": "An options hash for a new SessionRequest",
+                    "type": "Object",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "A SessionRequest instance",
+                "type": "SessionRequest"
+            },
+            "class": "Saiku",
+            "module": "Saiku"
+        },
+        {
+            "file": "saiku.js",
+            "line": 70,
+            "description": "Start a request against the `/discover` endpoint",
+            "itemtype": "method",
+            "name": "schemas",
+            "params": [
+                {
+                    "name": "options",
+                    "description": "An options hash for a new SchemasRequest",
+                    "type": "Object",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "A SchemasRequest instance",
+                "type": "SchemasRequest"
+            },
+            "class": "Saiku",
+            "module": "Saiku"
+        },
+        {
+            "file": "saiku.js",
+            "line": 83,
+            "description": "Start a request against the `/api/repository` endpoint",
+            "itemtype": "method",
+            "name": "repository",
+            "params": [
+                {
+                    "name": "options",
+                    "description": "An options hash for a new RepositoryRequest",
+                    "type": "Object",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "A RepositoryRequest instance",
+                "type": "RepositoryRequest"
+            },
+            "class": "Saiku",
+            "module": "Saiku"
+        },
+        {
+            "file": "saiku.js",
+            "line": 96,
+            "description": "Start a request against the `/api/query/admin/export` endpoint",
+            "itemtype": "method",
+            "name": "export",
+            "params": [
+                {
+                    "name": "options",
+                    "description": "An options hash for a new ExportRequest",
+                    "type": "Object",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "A ExportRequest instance",
+                "type": "ExportRequest"
+            },
+            "class": "Saiku",
+            "module": "Saiku"
+        },
+        {
+            "file": "saiku.js",
+            "line": 109,
+            "description": "Start a request against the `/api/query/execute` endpoint",
+            "itemtype": "method",
+            "name": "mdx",
+            "params": [
+                {
+                    "name": "options",
+                    "description": "An options hash for a new MDXRequest",
+                    "type": "Object",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "A MDXRequest instance",
+                "type": "MDXRequest"
+            },
+            "class": "Saiku",
+            "module": "Saiku"
+        }
+    ],
+    "warnings": [
+        {
+            "message": "Missing item type\nGet session id",
+            "line": " lib/export.js:25"
+        },
+        {
+            "message": "Missing item type\nThe URL template that will be used to assemble endpoint paths",
+            "line": " lib/export.js:44"
+        },
+        {
+            "message": "Missing item type\nGet session id",
+            "line": " lib/mdx.js:25"
+        },
+        {
+            "message": "Missing item type\nThe URL template that will be used to assemble endpoint paths",
+            "line": " lib/mdx.js:44"
+        },
+        {
+            "message": "Missing item type\nThe URL template that will be used to assemble endpoint paths",
+            "line": " lib/repository.js:35"
+        },
+        {
+            "message": "Missing item type\nThe URL template that will be used to assemble endpoint paths",
+            "line": " lib/schemas.js:35"
+        },
+        {
+            "message": "Missing item type\nGet Schemas",
+            "line": " lib/schemas.js:70"
+        },
+        {
+            "message": "Missing item type\nGet metadata Schemas",
+            "line": " lib/schemas.js:97"
+        },
+        {
+            "message": "Missing item type\nFetch cubes and join with schemas",
+            "line": " lib/schemas.js:125"
+        },
+        {
+            "message": "Missing item type\nThe URL template that will be used to assemble endpoint paths",
+            "line": " lib/session.js:37"
+        },
+        {
+            "message": "Missing item type\nSet a session in local storage",
+            "line": " lib/session.js:72"
+        }
+    ]
+}
